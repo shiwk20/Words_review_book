@@ -21,6 +21,9 @@
 
 如 `python words_book.py -t -r 20 200 `表示显示单词本第20到第200个单词且带中文翻译；`python words_book.py -a school tsinghua -d peiking ` 表示增删单词并更新翻译结果
 
+#### 问题
+此处的-a和-d后面加的参数都只能是单个单词而不能是词组（词组中间有空格会被识别成多个单词）。解决这个问题可以把词组中间的空格变成_，在add_delete_word.py中添加额外处理即可。该问题暂未在代码中解决。
+
 ### 项目环境
 
 见  `./requirements.yaml` (由 `conda env export > environment.yaml`自动生成，可能较臃肿)，运行 ` conda env create -n <env_name> -f ./requirements.yaml`建立新的conda环境，然后按上面的方式输入代码运行。
